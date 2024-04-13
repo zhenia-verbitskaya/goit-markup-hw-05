@@ -513,8 +513,8 @@ ul {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition-property: opacity;
-  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -534,19 +534,27 @@ ul {
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
-  padding: 24px;
+  padding: 72px 24px 24px;
+  transition: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button {
-  display: block;
-  margin-left: auto;
-  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  padding: 0;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition-property: background-color;
+  cursor: pointer;
+  transition-property: background-color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -554,11 +562,12 @@ ul {
 .close-button:hover,
 .close-button:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .close-icon {
   fill: #2e2f42;
-  transition-property: bfill;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -589,7 +598,7 @@ ul {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -641,6 +650,10 @@ ul {
   padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   outline: transparent;
   transition-property: border-color;
   transition-duration: 250ms;
@@ -674,7 +687,7 @@ ul {
 }
 
 .check-box {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -683,11 +696,14 @@ ul {
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
   fill: transparent;
+  transition: background-color, border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .check-label .check-box {
   background-color: #404bbf;
-  border: 1px solid #404bbf;
+  border: none;
   fill: #f4f4fd;
 }
 
@@ -718,6 +734,7 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
+  cursor: pointer;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

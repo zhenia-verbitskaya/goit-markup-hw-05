@@ -447,16 +447,21 @@ ul {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-input {
-  border: 1px solid #fff;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
   background: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  margin-right: 24px;
+  
   padding: 0 16px;
 }
 
@@ -465,19 +470,24 @@ ul {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-button {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;  
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   background: #4d5ae5;
   border: none;
+  cursor: pointer;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -488,14 +498,7 @@ ul {
   background-color: #31d0aa;
 }
 
-.footer-button span {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-}
-
-.footer-button .icon {
+.tg-icon {
   fill: #ffffff;
+  margin-left: 16px; 
 }

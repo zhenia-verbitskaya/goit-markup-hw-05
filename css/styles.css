@@ -686,8 +686,8 @@ ul {
   color: #8e8f99;
 }
 
-.check-box {
-  display: flex;
+.fake-check {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
